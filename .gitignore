@@ -245,3 +245,4 @@ $RECYCLE.BIN/
 
 my-venv
 layers/python
+.aws-sam

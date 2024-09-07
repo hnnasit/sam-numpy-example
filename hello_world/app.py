@@ -1,6 +1,4 @@
 import json
-import numpy
-
 # import requests
 
 
@@ -25,8 +23,11 @@ def lambda_handler(event, context):
 
         Return doc: https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html
     """
-
-    print(numpy.__file__)
+    try:
+        import numpy
+        print(numpy.__file__)
+    except Exception as e:
+        print (e)
 
     # try:
     #     ip = requests.get("http://checkip.amazonaws.com/")
